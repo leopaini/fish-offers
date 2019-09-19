@@ -120,19 +120,28 @@ ul.order
     font-size 1.4rem
     justify-content space-between
     align-items center
+
+    > span
+      width 100%
+      display flex
+      justify-content flex-start
+
+      span
+        &.price
+          font-size inherit 
+          margin-left: auto
+
     &:hover
-      // padding 1rem 0
       button
         display inline
+        margin-left 5px
+
     button
       border 0
+      padding 0
       display none
       line-height 1
-      padding 0
-    &.total
-      font-weight 600
-      border-bottom 3px solid black
-      border-top 3px double black
+
     &.unavailable
       text-decoration line-through
       background lighten(red, 80%)
@@ -145,6 +154,15 @@ ul.order
       span
         display inline-block
         // transition all 0.5s
+
+.order-wrap
+  .total
+      display flex
+      justify-content space-between
+      font-weight 600
+      padding 10px 0
+      border-bottom 3px solid black
+      border-top 3px double black
 
 .order-title
   text-align center

@@ -393,19 +393,26 @@ ul.order li {
   -webkit-box-align: center;
           align-items: center;
 }
+ul.order li > span {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+}
+ul.order li > span span.price {
+  font-size: inherit;
+  margin-left: auto;
+}
 ul.order li:hover button {
   display: inline;
+  margin-left: 5px;
 }
 ul.order li button {
   border: 0;
+  padding: 0;
   display: none;
   line-height: 1;
-  padding: 0;
-}
-ul.order li.total {
-  font-weight: 600;
-  border-bottom: 3px solid #000;
-  border-top: 3px double #000;
 }
 ul.order li.unavailable {
   text-decoration: line-through;
@@ -421,6 +428,16 @@ ul.order li span.count {
 }
 ul.order li span.count span {
   display: inline-block;
+}
+.order-wrap .total {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 3px solid #000;
+  border-top: 3px double #000;
 }
 .order-title {
   text-align: center;
